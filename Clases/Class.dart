@@ -1,8 +1,11 @@
 void main(){
-  final thony = new Soltero('Anthony', 'Observador');
+  final thony = new Soltero( 
+    nombre:'Anthony', 
+    poder: 'Observador'
+  );
+  
   print(thony);
-  print(thony.nombre);
-  print(thony.poder);
+
 
 }
 
@@ -10,12 +13,12 @@ class Soltero{
   String nombre;
   String poder;
 
-  Soltero({String nombre, String poder}){
+ /* Soltero({String nombre, String poder}){
     this.nombre =  nombre;
     this.poder = poder;
-  }
+  }*/
+  Soltero({this.nombre, this.poder});
 
-  String toString(){
-    return '${ this.nombre} - ${this.poder}';
-  }
+  String toString() =>  'nombre:$nombre - poder: $poder';
+
 }
