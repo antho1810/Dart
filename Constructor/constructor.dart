@@ -3,7 +3,7 @@ import 'dart:convert';
 void main(){
   //final thony = new Soltero('Anthony', 'Observación');
   final rawJson = '{"nombre":"Anthony", "poder":"Observacion"}';
-  Map parsedJson = json.deco(rawJson);
+  Map parsedJson = json.decode(rawJson);
 
   //print(parsedJson);
   final thony = new Soltero.fromJson( parsedJson );
@@ -19,8 +19,10 @@ class Soltero{
 
   Soltero(this.nombre, this.poder); 
 
-  Soltero.fromJson(Map parsedJson ){
+  Method.fromJson(Map parsedJson ){
     nombre = parsedJson['nombre'];
     poder = parsedJson['poder'];
-  } 
+  }
+
+  void get newMethod => Soltero; 
 }

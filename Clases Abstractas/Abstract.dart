@@ -7,18 +7,18 @@ void main(){
 }
 
 abstract class Animal {
-  int patas;
+  late int patas;
   void emitirSonido();
 }
 
 class Perro implements Animal {
-  int patas;
-  int colas;
+  late int patas;
+  late int colas;
   void emitirSonido() => print('GUUUAAAAAA');
 
 }
 
 class Gato implements Animal {
-  int patas;
+  late int patas;
   void emitirSonido() => print('MIAUUUU');
 }
